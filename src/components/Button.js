@@ -1,10 +1,9 @@
-
 function Button(props) {
-  return(
+  return (
     <div>
-      <button>{props.label}</button>
+      <button onClick={props.aoClicar}>{props.label}</button>
     </div>
-  )
+  );
 }
 
 export default Button;
