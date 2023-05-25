@@ -21,14 +21,16 @@ describe("Testando o componente Button", () => {
   });
 
   test("Chama a função passada como prop 'aoClicar' quando clicado", async () => {
+    // ARRANGE
     const user = userEvent.setup();
-
     const darLikeMock = jest.fn();
-    render(<Button label="Like" aoClicar={darLikeMock} />);
+    render(<Button label="Botão" aoClicar={darLikeMock} />);
     const button = screen.getByRole("button");
 
+    // ACT
     await user.click(button);
 
+    // ASSERT
     expect(darLikeMock).toBeCalled();
   });
 });
